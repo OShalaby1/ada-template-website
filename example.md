@@ -10,27 +10,24 @@ layout: default
   overflow: hidden;
 }
 
-.table-container:hover .floating-table {
+.table-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-container table th,
+.table-container table td {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.table-container:hover table th,
+.table-container:hover table td {
   transform: translateY(-10px);
-  transition: transform 0.3s ease-in-out;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   background-color: #fff;
 }
-
-.floating-table {
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease-in-out;
-  border-collapse: collapse;
-  margin: 0;
-}
-
-.floating-table th,
-.floating-table td {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-}
-
 </style>
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
@@ -39,7 +36,7 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 <!-- Add a container for the table -->
 <div class="table-container">
-  <table class="floating-table">
+  <table>
     <!-- Your table content here -->
     <thead>
       <tr>
